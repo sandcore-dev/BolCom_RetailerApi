@@ -1,2 +1,9 @@
 .DS_Store
 token.json
+BolCom_RetailerApi.iml
+modules.xml
+php.xml
+vcs.xml
+.idea/
+composer.lock
+vendor/
