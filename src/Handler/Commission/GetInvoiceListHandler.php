@@ -8,11 +8,8 @@ declare(strict_types=1);
 namespace BolCom\RetailerApi\Handler\Commission;
 
 use BolCom\RetailerApi\Client;
-use BolCom\RetailerApi\Model\Invoice\InvoicePdf;
 use BolCom\RetailerApi\Model\Invoice\InvoicePdfList;
-use BolCom\RetailerApi\Model\Invoice\Query\GetInvoice;
 use BolCom\RetailerApi\Model\Invoice\Query\GetInvoiceList;
-use BolCom\RetailerApi\Model\Invoice\QueryHandler\GetInvoiceHandlerInterface;
 use BolCom\RetailerApi\Model\Invoice\QueryHandler\GetInvoiceListHandlerInterface;
 
 class GetInvoiceListHandler implements GetInvoiceListHandlerInterface

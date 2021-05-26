@@ -8,9 +8,7 @@ declare(strict_types=1);
 
 namespace BolCom\RetailerApi\CommandHandler\Inbound\Query;
 
-use BolCom\RetailerApi\Model\Inbound\InventoryList;
 use BolCom\RetailerApi\Model\Inbound\PackingList;
-use BolCom\RetailerApi\Model\Inbound\Query\GetInventoryList;
 use BolCom\RetailerApi\Model\Inbound\Query\GetPackingList;
 
 interface GetPackingListHandlerInterface

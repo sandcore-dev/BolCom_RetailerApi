@@ -7,7 +7,11 @@ declare(strict_types=1);
 
 namespace BolCom\RetailerApi\Test\Integration\Handler\Commission;
 
-class AssertEanTest extends \PHPUnit\Framework\TestCase
+use BolCom\RetailerApi\Model\Offer\Ean;
+use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
+
+class AssertEanTest extends TestCase
 {
     /**
      * @test
@@ -15,7 +19,7 @@ class AssertEanTest extends \PHPUnit\Framework\TestCase
     public function pad_ean_to_thirteen_characters()
     {
         foreach (['190199221246', '17817655002'] as $value) {
-            \BolCom\RetailerApi\Model\Offer\Ean::fromString($value);
+            Ean::fromString($value);
         }
     }
 
@@ -24,8 +28,8 @@ class AssertEanTest extends \PHPUnit\Framework\TestCase
      */
     public function ean_greater_than_thirteen()
     {
-        $this->expectException(\InvalidArgumentException::class);
-        \BolCom\RetailerApi\Model\Offer\Ean::fromString('19019922124612');
+        $this->expectException(InvalidArgumentException::class);
+        Ean::fromString('19019922124612');
     }
 
     /**
@@ -33,7 +37,7 @@ class AssertEanTest extends \PHPUnit\Framework\TestCase
      */
     public function ean_is_invalid()
     {
-        $this->expectException(\InvalidArgumentException::class);
-        \BolCom\RetailerApi\Model\Offer\Ean::fromString('1901992212461');
+        $this->expectException(InvalidArgumentException::class);
+        Ean::fromString('1901992212461');
     }
 }

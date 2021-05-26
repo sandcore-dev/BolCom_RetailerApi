@@ -9,18 +9,20 @@ namespace BolCom\RetailerApi\Test\Integration\Handler\Order;
 
 use BolCom\RetailerApi\Client\ClientConfig;
 use BolCom\RetailerApi\Infrastructure\ClientPool;
+use BolCom\RetailerApi\Infrastructure\MessageBus;
 use BolCom\RetailerApi\Model\Shipment\Query\GetShipment;
 use BolCom\RetailerApi\Model\Shipment\ShipmentId;
+use PHPUnit\Framework\TestCase;
 
-class GetShipmentHandlerTest extends \PHPUnit\Framework\TestCase
+class GetShipmentHandlerTest extends TestCase
 {
-    /** @var \BolCom\RetailerApi\Infrastructure\MessageBus $messageBus */
+    /** @var MessageBus $messageBus */
     private $messageBus;
 
     protected function setUp()
     {
         $clientPool = ClientPool::configure(new ClientConfig(BOL_CLIENT_ID, BOL_CLIENT_SECRET, true));
-        $this->messageBus = new \BolCom\RetailerApi\Infrastructure\MessageBus($clientPool);
+        $this->messageBus = new MessageBus($clientPool);
     }
 
     public function test__invoke()
