@@ -1,7 +1,8 @@
 {
-    "name": "bol-com/retailer-api",
+    "name": "sandcore-dev/bol-com-retailer-api",
+    "description": "Package to talk to the bol.com v3 API.",
     "type": "library",
-    "version": "1.1.1",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Reach Digital",
@@ -9,8 +10,6 @@
             "homepage": "https://www.reachdigital.nl/"
         }
     ],
-    "description": "Package to talk to the bol.com v3 API.",
-    "license": "Apache-2.0",
     "require": {
         "guzzlehttp/guzzle": "~6.0",
         "kamermans/guzzle-oauth2-subscriber": "^1.0",
@@ -28,5 +27,8 @@
             "BolCom\\RetailerApi\\": "src",
             "Prooph\\Common\\": "prooph/common"
         }
+    },
+    "replace": {
+        "bol-com/retailer-api": "1.1.1"
     }
 }
